@@ -1,0 +1,12 @@
+/********************/
+/*** INDEX STYLES ***/
+/********************/
+ 
+/* Header */
+ 
+header{
+    padding-top: 2.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}

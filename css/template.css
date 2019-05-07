@@ -46,3 +46,73 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/***font***/
+
+@font-face {
+    font-family: Pt_sherif;
+    src: url('../tipo/webfontkit-Pt_sherif/pt_serif-web-regular-webfont.woff2') format('woff2'),
+         url('../tipo/webfontkit-Pt_sherif/pt_serif-web-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: Pt_shrif_bold;
+    src: url('../tipo/webfontkit-Pt_sherif/pt_serif-web-bold-webfont.woff2') format('woff2'),
+         url('../tipo/webfontkit-Pt_sherif/pt_serif-web-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: Muli;
+    src: url('../tipo/webfontkit_muli/muli-regular-webfont.woff2') format('woff2'),
+         url('../tipo/webfontkit_muli/muli-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: Muli-bold;
+    src: url('../tipo/webfontkit_muli/muli-bold-webfont.woff2') format('woff2'),
+         url('../tipo/webfontkit_muli/muli-bold-webfont.woff2') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+/*** TEMPLATE STYLES ***/
+
+/*
+Noir : #000000 
+Bleu : #001AA1
+*/
+
+html, body{
+    font-size: 100%;
+}
+
+
+html, body{
+        font-size: 90%;
+    }
+
+
+body {
+	font-family: Pt_sherif;
+	color: #001AA1;
+    background-color: #000000;
+    padding-top: 81px;
+}
+
+
+    body {
+        padding-top: 102px;
+    }
+
+
+
