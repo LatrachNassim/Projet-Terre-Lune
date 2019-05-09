@@ -4,9 +4,23 @@
  
 /* Header */
  
-header{
-    padding-top: 2.25rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+/* première partie de la page*/
+
+header {
+    background-image: url(../images/earth.jpg);
+    width: 100vw;
+    height: 40rem;
 }
+header h1 {
+     font-family: 'Pt_sherif';
+     color:white;
+     text-align: center;
+}
+
+header p {
+     font-family: 'Muli';
+     color:white;
+     text-align: center;
+}
+
+

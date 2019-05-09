@@ -1,0 +1,51 @@
+<section>
+            <div class="tmp_jules">
+                <article>
+                    <img src="images/jules verne.jpg">
+                    <h2>Jules Verne</h2> <br>
+                    <p>De la Terre à la Lune
+                        ​ est un roman d'anticipation de Jules Verne,  paru en 1865.<br> Il relate comment, après la fin
+                        de la guerre de  Sécession, une association d'artilleurs et de scientifiques liés à  l'industrie
+                        militaire tente d'envoyer sur la Lune un obus habité par  trois hommes.<br> 
+                    </p>
+                </article>
+            </div>
+
+
+            <div class="tmp_apollo">
+                <article>
+                    <img src="images/apollo.jpg">
+                    <h2>Apollo</h2><br>
+                    <p>Apollo 11 est une mission du programme spatial américain ​ Apollo​ au  cours de laquelle, pour la
+                        première fois, des hommes se sont posés  sur la Lune, le 20 juillet 1969 (21h56 à Houston, lundi
+                        21 juillet  1969 02h56 en France). 
+                    </p>
+                </article>
+            </div>
+
+            <div class="tmp_chine">
+                <article>
+                    <img src="images/la chine.jpg">
+                    <h2>La chine</h2><br>
+                    <p>La Chine a lancé en décembre 2018 une fusée Longue Marche-3B portant  la sonde Chang'e-4 qui
+                        devrait permettre le premier atterrissage en  douceur de l'autre côté de la lune.<br> La mission
+                        Chang'e-4 sera une  étape clé dans la révélation de la face cachée mystérieuse de la  lune.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            <img src="images/moon.jpg">
+            <img src="images/CNES-logo.png">
+            <img src="images/logolem.jpg">
+            <p>La proximité de la lune joue un rôle primordial dans la réalisation  de la vie sur Terre.<br> Son
+                attraction gravitationnelle stabilise  l'oscillation de la Terre sur son axe, menant à un climat
+                stable. 
+            </p>
+
+        </footer>
+    </main>
+</body>
+
+</html>
