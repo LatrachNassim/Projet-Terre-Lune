@@ -83,6 +83,32 @@ header p {
     height: 25rem;
 }
 
+/*troisième page*/
+
+footer {
+    background-image: url(../images/moon.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 50rem;
+    margin-top: 150rem;
+}
+
+.cnes {
+    margin-top: 20rem;
+    margin-left: 30rem;
+    width: 20rem;
+    height: 20rem;
+}
+
+footer p {
+     font-family: 'Muli';
+     color:white;
+     text-align: center;
+     margin: 0rem 20rem 0rem 30rem;
+}
+
+
+
 
 
 
