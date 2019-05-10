@@ -5,7 +5,7 @@ const scene = new THREE.Scene();
 // --- camera
 const aspect = window.innerWidth / window.innerHeight;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
-camera.position.z = 4;
+camera.position.set(0, 0, 5);
 scene.add(camera);
 
 // --- renderer
@@ -25,39 +25,94 @@ sun2.position.set(-30, 10, 20);
 scene.add(sun2);*/
 
 // --- plateau
+// add controls for the camera
+const controls = new THREE.OrbitControls(camera);
+
+const loaderEarth = new THREE.TextureLoader();
+
+let earth;
+let pivot = new THREE.Object3D();
+
+loaderEarth.load(
+  '../images/texture_earth-5400x2700(1).jpg',
+
+  
+
+  // onLoad callback
+  function (texture) {
+    // in this example we create the material when the texture is loaded
+    const geometryEarth = new THREE.SphereGeometry(1.5, 80, 80);
+    const materialEarth = new THREE.MeshBasicMaterial({
+      map: texture
+    });
+    earth = new THREE.Mesh(geometryEarth, materialEarth);
+
+    scene.add(earth);
+  
+  },
+);
 
 
-const geometryEarth = new THREE.SphereGeometry( 1, 40, 40 );
-const materialEarth = new THREE.MeshBasicMaterial( { color: "#433f81" } );
-const earth = new THREE.Mesh( geometryEarth, materialEarth );
+
+const loaderMoon = new THREE.TextureLoader();
+
+let moon;
+
+loaderMoon.load(
+  '../images/texture_moon.jpg',
+
+  
+
+  // onLoad callback
+  function (texture) {
+    // in this example we create the material when the texture is loaded
+    const geometryMoon = new THREE.SphereGeometry(0.5, 50, 50);
+    const materialMoon = new THREE.MeshBasicMaterial({
+      map: texture
+    });
+    moon = new THREE.Mesh(geometryMoon, materialMoon);
+    moon.position.set(3.8, 0, 0);
+
+    scene.add(moon);
+  },
+  
+);
+
+//Load background texture
+const background = loaderEarth.load('../images/stars-1920x1080.jpg');
+scene.background = background;
 
 
-const geometryMoon = new THREE.SphereGeometry( 0.3, 25, 25 );
-const materialMoon = new THREE.MeshBasicMaterial( { color: "#ffff00" } );
-const moon = new THREE.Mesh( geometryMoon, materialMoon );
-
-moon.position.x += 2;
 
 
-
-scene.add(earth, moon);
+    
 
 const render = function () {
-    requestAnimationFrame( render );
-  
-    earth.rotation.x += 0.01;
-    earth.rotation.y += 0.01;
-
-    moon.rotation.x += -0.01;
+  if (earth && moon) {
+    earth.rotation.y += 0.001;
     moon.rotation.y += -0.01;
+   
+
+    earth.add(pivot);
+    pivot.add(moon);
+    
+  }
+
+ 
+    
+  
+  
     
 
    
 
   
     // Render the scene
-    renderer.render(scene, camera);
-  };
+  renderer.render(scene, camera);
+  requestAnimationFrame( render );
+};
   
-  render();
+render();
+
+
 
