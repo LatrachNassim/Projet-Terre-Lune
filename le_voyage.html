@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Site Terre-Lune</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/allPage.css">
+    <link rel="stylesheet" href="css/le_voyage.css">
+</head>
+
+<body>
+    <nav class="tmp-menu" data-state="closed">
+
+        <div class=img_logo>
+            <a href="index.html"><img src="images/logo.png" alt="logo du site"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="vue_de_l'espace.html">Vue de l'espace</a></li>
+            <li><a class="active" href="le_voyage.html">Le voyage</a></li>
+
+        </ul>
+
+    </nav>
+
+    <header>
+        <h1>Faisons le voyage ensemble.</h1>
+        <p>
+            A l’aide du slider, sélectionnez la vitesse que vous désirez pour  faire le voyage de la Terre à la Lune.
+            Nous calculerons pour vous la  durée du voyage et le mode de transport qui correspond. 
+        </p>
+    </header>
+
+    <div class="slidecontainer">
+        <input type="range" min="10" max="5500" Value="50" class="slider" id="myRange">
+        <p><strong>Vitesse</strong>: <span id="demo"></span> Km/h </p>
+        <p>la durée en heure est : <span id="temps"></span> h </p>        
+    </div>
+
+
+    <script>
+        let slider = document.getElementById("myRange");
+        let output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+    </script>
+
+
+
+    <script src="js/levoyage.js"></script>
